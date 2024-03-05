@@ -15,7 +15,7 @@ struct thrasher_node{
 void thrasher_generate(char* buffer, int r, int c){
 	const int DIR_UP = 0, DIR_DOWN = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
 	int stack_depth = 0;
-	memset(buffer,'!',((2*r+1)*(2*c+1)*sizeof(char)));
+	memset(buffer,'#',((2*r+1)*(2*c+1)*sizeof(char)));
 	char* visited = (char*)malloc(r*c*sizeof(char));
 	memset(visited,0,r*c);
 	struct thrasher_node* root = (struct thrasher_node*) malloc(sizeof(struct thrasher_node));
